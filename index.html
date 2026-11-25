@@ -1,21 +1,12 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>NID Service Center | NID সংক্রান্ত তথ্য ও সহায়তা</title>
-<meta name="description" content="NID সংশোধন, হারানো কার্ড, নতুন ভোটার নিবন্ধন, ফর্ম নম্বর ও ভোটার এলাকা পরিবর্তন সম্পর্কে সাধারণ তথ্য ও নির্দেশনা।">
-<meta name="keywords" content="NID Service Center, NID Bangladesh, NID correction, হারানো NID, নতুন ভোটার">
-<meta name="theme-color" content="#0756c9">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://mollamdsakil100-star.github.io/nid-service-center/">
-
-<meta property="og:title" content="NID Service Center">
-<meta property="og:description" content="NID সংক্রান্ত তথ্য ও সাধারণ সহায়তা">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://mollamdsakil100-star.github.io/nid-service-center/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NID Service Center থেকে জাতীয় পরিচয়পত্র সংক্রান্ত সাধারণ তথ্য ও নির্দেশনা জানুন। এটি বেসরকারি তথ্য সহায়তা ওয়েবসাইট।">
+<meta name="theme-color" content="#071b3b">
+<title>NID Service Center | তথ্য ও সহায়তা</title>
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCR41FDBQ2"></script>
@@ -26,143 +17,511 @@ gtag('js', new Date());
 gtag('config', 'G-LCR41FDBQ2');
 
 function trackClick(action) {
-  gtag('event', action, {
-    event_category: 'Contact',
-    event_label: action
-  });
+  if (typeof gtag === 'function') {
+    gtag('event', action, {
+      event_category: 'Contact',
+      event_label: action
+    });
+  }
 }
 </script>
 
 <style>
-:root{--b:#0756c9;--d:#073b87;--p:#eef5ff;--ink:#172b4d;--muted:#5c6b82;--line:#dce8f8}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:system-ui,"Noto Sans Bengali",sans-serif;background:#f5f8fe;color:var(--ink);line-height:1.7}
-a{text-decoration:none}
-.top{background:linear-gradient(110deg,var(--d),#087be8);color:white;text-align:center;padding:10px;font-size:14px}
-header{background:white;position:sticky;top:0;z-index:3;box-shadow:0 4px 18px #092d5c12}
-.nav{max-width:1080px;margin:auto;padding:13px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.brand{font-weight:850;color:var(--d);font-size:18px}
-.brand span{display:inline-grid;place-items:center;background:linear-gradient(130deg,#087be8,var(--d));color:white;border-radius:12px;width:42px;height:42px;margin-right:8px}
-.nav a{color:var(--d);font-weight:700;font-size:14px}
-.hero{background:linear-gradient(125deg,var(--d),#087be8);color:white;text-align:center;padding:62px 18px 72px}
-.hero .tag{display:inline-block;border:1px solid #ffffff70;background:#ffffff20;padding:5px 13px;border-radius:30px;font-size:13px}
-.hero h1{font-size:clamp(30px,5vw,47px);line-height:1.25;margin:18px 0 12px}
-.hero p{max-width:720px;margin:0 auto 23px;color:#e8f2ff}
-.actions{display:flex;justify-content:center;gap:11px;flex-wrap:wrap}
-.btn{display:inline-block;padding:11px 18px;border-radius:12px;font-weight:800}
-.light{background:white;color:var(--d)}
-.outline{border:1px solid #ffffffa8;color:white}
-.notice{max-width:1000px;margin:-24px auto 0;padding:0 17px;position:relative}
-.notice div{background:white;border:1px solid var(--line);border-left:5px solid #e4a11b;border-radius:14px;padding:14px 17px;font-size:14px;box-shadow:0 9px 24px #173d6b0c}
-main{max-width:1080px;margin:44px auto;padding:0 18px}
-.heading{text-align:center;margin-bottom:24px}
-.heading h2{color:var(--d);font-size:28px;margin:0 0 5px}
-.heading p{margin:0;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:16px}
-.card{background:white;border:1px solid var(--line);border-radius:17px;padding:20px;box-shadow:0 8px 24px #153e700d}
-.ico{width:44px;height:44px;border-radius:13px;background:var(--p);display:grid;place-items:center;font-size:22px;margin-bottom:11px}
-.card h3{margin:0 0 7px;color:var(--d);font-size:18px}
-.card p{margin:0;color:var(--muted);font-size:14px}
-.info{margin-top:35px;background:white;border:1px solid var(--line);border-radius:18px;padding:23px}
-.info h2{color:var(--d);margin:0 0 9px}
-.info li{color:var(--muted);margin:5px 0}
-.official{display:inline-block;background:var(--b);color:white;padding:10px 16px;border-radius:11px;font-weight:800;margin-top:7px}
-.small{font-size:12px;color:#738198}
-.contact{margin-top:35px;background:linear-gradient(125deg,var(--d),#087be8);color:white;border-radius:21px;text-align:center;padding:28px 18px}
-.contact h2{margin:0 0 6px;font-size:27px}
-.contact p{margin:5px 0;color:#e8f2ff}
-.contact .actions{margin-top:16px}
-.contact .small{color:#e8f2ff;margin-top:14px}
-footer{text-align:center;padding:24px 14px;color:#68778e;font-size:13px}
-@media(max-width:600px){
-.nav{padding:10px 13px}
-.brand{font-size:15px}
-.nav .navlink{display:none}
-.hero{padding:48px 16px 62px}
-main{margin:35px auto;padding:0 14px}
-.card{padding:18px}
+:root {
+  --navy: #071b3b;
+  --blue: #0756c9;
+  --light: #eef5ff;
+  --green: #16a765;
+  --ink: #172b4d;
+  --muted: #64748b;
+  --line: #dce8f8;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: system-ui, "Noto Sans Bengali", sans-serif;
+  background: #f5f8fe;
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+a { text-decoration: none; }
+
+.topline {
+  background: #04132c;
+  color: #dbeafe;
+  text-align: center;
+  padding: 9px;
+  font-size: 13px;
+}
+
+header {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 5px 20px #071b3b12;
+}
+
+.nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 13px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand {
+  color: var(--navy);
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.brand span {
+  display: inline-grid;
+  place-items: center;
+  background: linear-gradient(135deg, #087be8, var(--navy));
+  color: white;
+  width: 43px;
+  height: 43px;
+  border-radius: 13px;
+  margin-right: 8px;
+}
+
+.nav a {
+  color: var(--blue);
+  font-weight: 750;
+  font-size: 14px;
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 85% 15%, #65d8ef30 0 8%, transparent 8.5%),
+    linear-gradient(125deg, #06152f, #0b2c5a 60%, #14518a);
+  color: white;
+  text-align: center;
+  padding: 70px 18px 82px;
+}
+
+.hero-inner {
+  max-width: 850px;
+  margin: auto;
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 15px;
+  border: 1px solid #ffffff55;
+  border-radius: 30px;
+  background: #ffffff12;
+  color: #d8f5ff;
+  font-size: 13px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 5vw, 52px);
+  line-height: 1.25;
+  margin: 20px 0 12px;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto 25px;
+  color: #d8e7fb;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.btn-gold {
+  background: #f0d18c;
+  color: #17233b;
+}
+
+.btn-glass {
+  border: 1px solid #ffffff80;
+  color: white;
+  background: #ffffff12;
+}
+
+.notice {
+  max-width: 1050px;
+  margin: -25px auto 0;
+  padding: 0 16px;
+  position: relative;
+}
+
+.notice-box {
+  background: white;
+  border: 1px solid #f0dfb8;
+  border-left: 5px solid #d8ad52;
+  border-radius: 15px;
+  padding: 16px;
+  box-shadow: 0 10px 28px #0a234512;
+  font-size: 14px;
+}
+
+main {
+  max-width: 1100px;
+  margin: 45px auto;
+  padding: 0 18px;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.section-head h2 {
+  color: var(--navy);
+  font-size: 29px;
+  margin: 0 0 5px;
+}
+
+.section-head p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  padding: 20px;
+  box-shadow: 0 8px 24px #153e700d;
+}
+
+.ico {
+  width: 45px;
+  height: 45px;
+  border-radius: 13px;
+  background: var(--light);
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 0 0 7px;
+  color: var(--navy);
+  font-size: 18px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.info {
+  margin-top: 35px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 23px;
+}
+
+.info h2 {
+  color: var(--navy);
+  margin-top: 0;
+}
+
+.info li {
+  margin: 7px 0;
+  color: var(--muted);
+}
+
+.official {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  padding: 11px 17px;
+  border-radius: 11px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.contact {
+  margin-top: 35px;
+  background: linear-gradient(125deg, #071b3b, #0756c9);
+  color: white;
+  border-radius: 21px;
+  text-align: center;
+  padding: 30px 18px;
+}
+
+.contact h2 {
+  margin: 0 0 7px;
+  font-size: 28px;
+}
+
+.contact p {
+  margin: 5px 0;
+  color: #e8f2ff;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  max-width: 340px;
+  margin: 23px auto;
+}
+
+.contact-btn {
+  display: block;
+  padding: 15px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 850;
+  color: white;
+  transition: transform .2s;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+}
+
+.phone {
+  background: linear-gradient(135deg, #2581ed, #073b87);
+  border: 1px solid #ffffff45;
+}
+
+.whatsapp {
+  background: linear-gradient(135deg, #20c878, #087c4a);
+}
+
+.privacy-warning {
+  max-width: 620px;
+  margin: 23px auto 0;
+  padding: 16px;
+  background: #fff4dc;
+  color: #674b12;
+  border: 1px solid #efd18c;
+  border-radius: 13px;
+  text-align: left;
+}
+
+.privacy-warning p {
+  margin: 5px 0 0;
+  color: #674b12;
+  font-size: 14px;
+}
+
+.small {
+  font-size: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 14px;
+  color: #68778e;
+  font-size: 13px;
+}
+
+@media(max-width:600px) {
+  .nav { padding: 10px 13px; }
+  .brand { font-size: 15px; }
+  .nav .navlink { display: none; }
+  .hero { padding: 50px 15px 62px; }
+  main { margin: 35px auto; padding: 0 14px; }
+  .card { padding: 18px; }
 }
 </style>
 </head>
 
 <body>
-<div class="top">তথ্য সহায়তা • প্রতিদিন যোগাযোগ: সকাল ৯টা – রাত ৯টা</div>
+
+<div class="topline">
+  তথ্য সহায়তা • প্রতিদিন যোগাযোগ: সকাল ৯টা – রাত ৯টা
+</div>
 
 <header>
-<div class="nav">
-<div class="brand"><span>NID</span>NID SERVICE CENTER</div>
-<a class="navlink" href="#services">সেবার তথ্য</a>
-<a class="navlink" href="#contact">যোগাযোগ</a>
-</div>
+  <div class="nav">
+    <div class="brand">
+      <span>NID</span>NID SERVICE CENTER
+    </div>
+    <a class="navlink" href="#services">সেবার তথ্য</a>
+    <a class="navlink" href="#contact">যোগাযোগ</a>
+  </div>
 </header>
 
 <section class="hero">
-<span class="tag">NID সংক্রান্ত তথ্য ও সাধারণ সহায়তা</span>
-<h1>আপনার NID সংক্রান্ত তথ্য<br>সহজভাবে জানুন</h1>
-<p>জাতীয় পরিচয়পত্র সংশোধন, হারানো কার্ড, ফর্ম নম্বর, ভোটার এলাকা পরিবর্তন এবং অনলাইন সেবা সম্পর্কে প্রয়োজনীয় নির্দেশনা এক জায়গায়।</p>
-<div class="actions">
-<a class="btn light" href="#services">সেবাগুলো দেখুন</a>
-<a class="btn outline" href="https://services.nidw.gov.bd/" target="_blank" rel="noopener">সরকারি NID সেবা</a>
-</div>
+  <div class="hero-inner">
+    <span class="pill">NID সংক্রান্ত তথ্য ও সাধারণ সহায়তা</span>
+    <h1>আপনার NID সংক্রান্ত তথ্য<br>সহজভাবে জানুন</h1>
+    <p>
+      জাতীয় পরিচয়পত্র সংশোধন, হারানো কার্ড,
+      ফর্ম নম্বর, ভোটার এলাকা পরিবর্তন এবং
+      অনলাইন সেবা সম্পর্কে সাধারণ নির্দেশনা।
+    </p>
+    <div class="actions">
+      <a class="btn btn-gold" href="#services">সেবাগুলো দেখুন</a>
+      <a class="btn btn-glass"
+         href="https://services.nidw.gov.bd/"
+         target="_blank" rel="noopener">
+        সরকারি NID সেবা ↗
+      </a>
+    </div>
+  </div>
 </section>
 
 <div class="notice">
-<div><strong>গুরুত্বপূর্ণ ঘোষণা:</strong> NID Service Center একটি বেসরকারি তথ্য ও সহায়তা ওয়েবসাইট। এটি বাংলাদেশ নির্বাচন কমিশনের সরকারি ওয়েবসাইট বা অনুমোদিত সরকারি কেন্দ্র নয়। সরকারি আবেদন ও ব্যক্তিগত তথ্য ব্যবস্থাপনার জন্য শুধু সরকারি NID পোর্টাল ব্যবহার করুন।</div>
+  <div class="notice-box">
+    <strong>গুরুত্বপূর্ণ ঘোষণা:</strong>
+    NID Service Center একটি বেসরকারি তথ্য ও সহায়তা ওয়েবসাইট।
+    এটি বাংলাদেশ নির্বাচন কমিশনের সরকারি ওয়েবসাইট বা
+    অনুমোদিত সরকারি কেন্দ্র নয়। সরকারি আবেদন ও ব্যক্তিগত
+    তথ্য ব্যবস্থাপনার জন্য শুধু সরকারি NID পোর্টাল ব্যবহার করুন।
+  </div>
 </div>
 
 <main>
-<section id="services">
-<div class="heading">
-<h2>আমাদের তথ্য বিভাগ</h2>
-<p>NID সংক্রান্ত সাধারণ নিয়ম ও সরকারি সেবা ব্যবহারের নির্দেশনা</p>
-</div>
 
-<div class="grid">
-<article class="card"><div class="ico">📝</div><h3>NID কার্ড সংশোধন</h3><p>নাম, জন্মতারিখ, ঠিকানা ও অন্যান্য তথ্য সংশোধনের সাধারণ নিয়ম এবং প্রয়োজনীয় কাগজপত্র সম্পর্কে জানুন।</p></article>
-<article class="card"><div class="ico">🪪</div><h3>হারানো NID কার্ড</h3><p>হারানো পরিচয়পত্রের পুনর্মুদ্রণ বা পুনরায় সংগ্রহের সরকারি পদ্ধতি সম্পর্কে তথ্য।</p></article>
-<article class="card"><div class="ico">🔢</div><h3>NID নম্বর দিয়ে কপি</h3><p>নিজের NID নম্বর ব্যবহার করে সরকারি পোর্টালে পরিচয়পত্রের অনলাইন কপি পাওয়ার নিয়ম জানুন।</p></article>
-<article class="card"><div class="ico">📄</div><h3>ফর্ম নম্বর দিয়ে তথ্য</h3><p>ভোটার নিবন্ধনের সময় পাওয়া ফর্ম নম্বর দিয়ে নিজের নিবন্ধনের অবস্থা বা পরবর্তী করণীয় জানার নির্দেশনা।</p></article>
-<article class="card"><div class="ico">👤</div><h3>নতুন ভোটার নিবন্ধন</h3><p>নতুন ভোটার হওয়ার যোগ্যতা, নিবন্ধন প্রক্রিয়া ও প্রয়োজনীয় কাগজপত্র সম্পর্কে সাধারণ তথ্য।</p></article>
-<article class="card"><div class="ico">📍</div><h3>ভোটার এলাকা পরিবর্তন</h3><p>বাসস্থান পরিবর্তনের পর ভোটার এলাকা স্থানান্তরের সরকারি নিয়ম ও আবেদন সংক্রান্ত তথ্য।</p></article>
-<article class="card"><div class="ico">🔍</div><h3>কার্ডের অবস্থা যাচাই</h3><p>নিজের NID বা নিবন্ধনের অবস্থা সরকারি পোর্টাল থেকে যাচাই করার নির্দেশনা।</p></article>
-<article class="card"><div class="ico">📚</div><h3>কাগজপত্র ও ফি</h3><p>বিভিন্ন সরকারি NID সেবায় প্রয়োজনীয় কাগজপত্র এবং প্রযোজ্য ফি সম্পর্কে সরকারি নির্দেশনা দেখুন।</p></article>
-</div>
+<section id="services">
+  <div class="section-head">
+    <h2>আমাদের তথ্য বিভাগ</h2>
+    <p>NID সংক্রান্ত সাধারণ নিয়ম ও সরকারি সেবা ব্যবহারের নির্দেশনা</p>
+  </div>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="ico">📝</div>
+      <h3>NID কার্ড সংশোধন</h3>
+      <p>নাম, জন্মতারিখ, ঠিকানা ও অন্যান্য তথ্য সংশোধনের সাধারণ নিয়ম সম্পর্কে জানুন।</p>
+    </article>
+
+    <article class="card">
+      <div class="ico">🪪</div>
+      <h3>হারানো NID কার্ড</h3>
+      <p>হারানো পরিচয়পত্রের পুনর্মুদ্রণ বা পুনরায় সংগ্রহের সরকারি পদ্ধতি সম্পর্কে তথ্য।</p>
+    </article>
+
+    <article class="card">
+      <div class="ico">🔢</div>
+      <h3>NID নম্বর দিয়ে কপি</h3>
+      <p>নিজের NID নম্বর ব্যবহার করে সরকারি পোর্টালে অনলাইন কপি পাওয়ার নিয়ম জানুন।</p>
+    </article>
+
+    <article class="card">
+      <div class="ico">📄</div>
+      <h3>ফর্ম নম্বর দিয়ে তথ্য</h3>
+      <p>ভোটার নিবন্ধনের ফর্ম নম্বর দিয়ে নিজের নিবন্ধনের অবস্থা জানার নির্দেশনা।</p>
+    </article>
+
+    <article class="card">
+      <div class="ico">👤</div>
+      <h3>নতুন ভোটার নিবন্ধন</h3>
+      <p>নতুন ভোটার হওয়ার যোগ্যতা ও নিবন্ধন প্রক্রিয়া সম্পর্কে সাধারণ তথ্য।</p>
+    </article>
+
+    <article class="card">
+      <div class="ico">📍</div>
+      <h3>ভোটার এলাকা পরিবর্তন</h3>
+      <p>বাসস্থান পরিবর্তনের পর ভোটার এলাকা স্থানান্তরের সরকারি নিয়ম সম্পর্কে জানুন।</p>
+    </article>
+
+    <article class="card">
+      <div class="ico">🔍</div>
+      <h3>কার্ডের অবস্থা যাচাই</h3>
+      <p>নিজের NID বা নিবন্ধনের অবস্থা সরকারি পোর্টাল থেকে যাচাই করার নির্দেশনা।</p>
+    </article>
+
+    <article class="card">
+      <div class="ico">📚</div>
+      <h3>কাগজপত্র ও ফি</h3>
+      <p>বিভিন্ন সরকারি NID সেবায় প্রয়োজনীয় কাগজপত্র ও ফি সম্পর্কে সরকারি নির্দেশনা দেখুন।</p>
+    </article>
+
+  </div>
 </section>
 
 <section class="info">
-<h2>নিরাপদে NID সেবা ব্যবহার করুন</h2>
-<ul>
-<li>সরকারি আবেদন, যাচাই ও ফি প্রদানের জন্য সরকারি NID পোর্টাল ব্যবহার করুন।</li>
-<li>আপনার NID নম্বর, ফর্ম নম্বর, জন্মতারিখ, OTP, পাসওয়ার্ড বা NID কার্ডের ছবি এই ওয়েবসাইটে বা WhatsApp-এ পাঠাবেন না।</li>
-<li>অন্য কারও পরিচয়পত্রের তথ্য অনুমতি ছাড়া ব্যবহার করবেন না।</li>
-<li>সেবা, ফি ও নিয়ম পরিবর্তিত হতে পারে; সর্বশেষ তথ্য সরকারি পোর্টালে যাচাই করুন।</li>
-</ul>
-<a class="official" href="https://services.nidw.gov.bd/" target="_blank" rel="noopener">সরকারি NID পোর্টালে যান ↗</a>
-<p class="small">সরকারি সেবা ও আবেদন এই ওয়েবসাইটের মাধ্যমে সম্পন্ন হয় না।</p>
+  <h2>নিরাপদে NID সেবা ব্যবহার করুন</h2>
+  <ul>
+    <li>সরকারি আবেদন ও যাচাইয়ের জন্য সরকারি NID পোর্টাল ব্যবহার করুন।</li>
+    <li>আপনার NID নম্বর, জন্মতারিখ, OTP বা পাসওয়ার্ড কাউকে দেবেন না।</li>
+    <li>অন্য কারও পরিচয়পত্রের তথ্য অনুমতি ছাড়া ব্যবহার করবেন না।</li>
+    <li>সেবা ও ফি পরিবর্তিত হতে পারে; সর্বশেষ তথ্য সরকারি পোর্টালে যাচাই করুন।</li>
+  </ul>
+  <a class="official"
+     href="https://services.nidw.gov.bd/"
+     target="_blank" rel="noopener">
+    সরকারি NID পোর্টালে যান ↗
+  </a>
+  <p class="small">সরকারি আবেদন এই ওয়েবসাইটের মাধ্যমে সম্পন্ন হয় না।</p>
 </section>
 
 <section class="contact" id="contact">
-<h2>যোগাযোগ করুন</h2>
-<p>সাধারণ তথ্য জানতে ফোন বা WhatsApp-এ যোগাযোগ করতে পারেন।</p>
-<p><strong>মোবাইল / WhatsApp:</strong> 01842412013</p>
-<p><strong>সময়:</strong> প্রতিদিন সকাল ৯টা থেকে রাত ৯টা</p>
+  <h2>যোগাযোগ করুন</h2>
+  <p>সাধারণ তথ্য জানতে আমাদের সঙ্গে যোগাযোগ করুন।</p>
+  <p><strong>মোবাইল / WhatsApp:</strong> 01842412013</p>
+  <p><strong>সময়:</strong> প্রতিদিন সকাল ৯টা থেকে রাত ৯টা</p>
 
-<div class="actions">
-<a class="btn light" href="tel:+8801842412013" onclick="trackClick('phone_click')">📞 ফোন করুন</a>
-<a class="btn outline" href="https://wa.me/8801842412013" target="_blank" rel="noopener" onclick="trackClick('whatsapp_call_click')">📞 WhatsApp-এ কল করুন</a>
-<a class="btn outline" href="https://wa.me/8801842412013?text=আমি%20আপনাদের%20সেবা%20সম্পর্কে%20জানতে%20চাই" target="_blank" rel="noopener" onclick="trackClick('whatsapp_message_click')">💬 WhatsApp-এ মেসেজ দিন</a>
-</div>
+  <div class="contact-buttons">
 
-<p class="small">অনুগ্রহ করে ফোন বা WhatsApp-এ কোনো গোপন NID তথ্য, OTP বা নথির ছবি পাঠাবেন না।</p>
+    <a class="contact-btn phone"
+       href="tel:+8801842412013"
+       onclick="trackClick('phone_click')">
+      📞 ফোন করুন
+    </a>
+
+    <a class="contact-btn whatsapp"
+       href="https://wa.me/8801842412013?text=আমি%20আপনার%20সেবা%20সম্পর্কে%20জানতে%20চাই"
+       target="_blank"
+       rel="noopener"
+       onclick="trackClick('whatsapp_message_click')">
+      WhatsApp-এ মেসেজ দিন
+    </a>
+
+  </div>
+
+  <div class="privacy-warning">
+    <strong>🔒 গুরুত্বপূর্ণ সতর্কবার্তা</strong>
+    <p>
+      অনুগ্রহ করে WhatsApp-এ কোনো গোপন তথ্য,
+      NID নম্বর, জন্মতারিখ, OTP, পাসওয়ার্ড অথবা
+      পরিচয়পত্রের ছবি পাঠাবেন না।
+    </p>
+  </div>
 </section>
+
 </main>
 
-<footer>© <span id="year"></span> NID SERVICE CENTER • বেসরকারি তথ্য সহায়তা ওয়েবসাইট</footer>
+<footer>
+  © <span id="year"></span> NID SERVICE CENTER
+  • বেসরকারি তথ্য সহায়তা ওয়েবসাইট
+</footer>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 </script>
+
 </body>
-  </html>
-  
+</html>
